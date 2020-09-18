@@ -2,17 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
 
 // Variables
-// @import 'variables';
+@import 'variables';
 
 // Bootstrap
-// @import '~bootstrap/scss/bootstrap';
-
-// Tailwind
-@import "tailwindcss/base";
-
-@import "tailwindcss/components";
-
-@import "tailwindcss/utilities";
+@import '~bootstrap/scss/bootstrap';
 
 html {
     font-family: 'Nunito', sans-serif;
@@ -29,10 +22,72 @@ html {
         left: 5%;
         position: absolute;
         text-align: center;
+        color: #9ea9ae;
     }
 
     .title {
         font-size: 6rem;
         font-weight: 100;
+    }
+}
+
+/* Menu Page Styles */
+
+.menu-body {
+    background-image: url("/img/menu.jpg");
+    background-size: cover;
+    height: 100vh;
+    margin: 0;
+}
+
+.menu-h1 {
+    color: #323638;
+    font-size: 3.4rem;
+}
+
+.menu-items {
+    background: #f6f6f6dc;
+}
+
+.menu-wrapper {
+    background-image: url('/img/5.jpg');
+    background-size: cover;
+    background-position: top;
+}
+
+.links {
+    a {
+        color: #636b6f;
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: .1rem;
+        padding: 0 25px;
+        text-decoration: none;
+        text-transform: uppercase;
+
+        &:hover {
+            color: rgba(255, 255, 255, 0.795);
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .content {
+        bottom: 12%;
+        position: absolute;
+        text-align: center;
+    }
+
+    .home-body {
+        .title {
+            font-size: 4.6rem;
+            line-height: 1.2;
+        }
+    }
+
+    .links {
+        a {
+            font-size: 12px;
+        }
     }
 }
