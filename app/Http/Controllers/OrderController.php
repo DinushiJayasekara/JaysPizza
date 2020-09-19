@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Order;
 use App\Models\Pizza;
+use App\Models\Topping;
 use Illuminate\Http\Request;
 
 class OrderController extends Controller
@@ -30,9 +31,11 @@ class OrderController extends Controller
     public function create()
     {
         $pizzas = Pizza::all();
+        $toppings = Topping::all();
 
         return view('orders.create', [
             'pizzas' => $pizzas,
+            'toppings' => $toppings,
         ]);
     }
 

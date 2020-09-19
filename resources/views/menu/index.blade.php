@@ -7,46 +7,39 @@
             Menu .
         </h1>
 
-        <div class="container px-5 py-3">
+        <div class="container px-5 my-3">
 
             <div class="menu-items">
                 <div class="row mt-3 justify-content-md-center">
 
                     <div class="col-4">
-                        <table class="table table-responsive px-4">
+                        <table class="table table-responsive px-4 pt-5">
                             <thead>
                                 <th scope="col" colspan="2">🍱 Toppings</th>
                             </thead>
                             <tbody>
-                                {{-- @for($i = 0; $i < count($toppings); $i+=2)
+                                @foreach ($toppings as $topping)
                                     <tr>
-                                        <td>{{ $toppings[$i]->type }}</td>
-                                        <td>{{ $toppings[$i+1]->type }}</td>
+                                        <td>{{ $topping->type }}</td>
                                     </tr>
-                                @endfor --}}
+                                @endforeach
                             </tbody>
                         </table>
                     </div>
 
                     <div class="col-4">
-                        <table class="table table-responsive table-hover">
+                        <table class="table table-responsive table-hover pt-5">
                             <thead>
                                 <th scope="col">🍕 Pizzas</th>
-                                <th scope="col">Small</th>
-                                <th scope="col">Large</th>
+                                <th scope="col">Price</th>
                             </thead>
                             <tbody>
-                                {{-- @for($i = 0; $i < count($pizzas); $i++)
+                                @foreach ($pizzas as $pizza)
                                     <tr>
-                                        @if($pizzas[$i]->size == 'Small')
-                                            <td>{{ $pizzas[$i]->type }}</td>
-                                            <td>${{ $pizzas[$i]->price }}</td>
-                                            @if($pizzas[++$i]->size == 'Large')
-                                            <td>${{ $pizzas[$i]->price }}</td>
-                                            @endif
-                                        @endif
+                                        <td>{{ $pizza->type }}</td>
+                                        <td>${{ $pizza->price }}</td>
                                     </tr>
-                                @endfor --}}
+                                @endforeach
                             </tbody>
                         </table>
                     </div>
@@ -55,7 +48,7 @@
                 <br>
                 <p class="text-center">
                     <b>
-                    🤘 All pizzas will have a main topping(s) and upto 5 more of your choice ~ Except for The Deep End... Go nuts and put upto 10 toppings!
+                    💰 $1.50 will be added for each extra topping on your pizza.
                     </b>
                 </p>
                 <br>
