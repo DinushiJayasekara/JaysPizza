@@ -16,6 +16,16 @@
             </div>
         @endif
 
+        @if (session()->has('msg')) {
+            <div class="alert alert-light alert-dismissible fade show mx-5 my-3" role="alert">
+                <strong>Yay!</strong> {{ session('msg') }}
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        @endif
+
+
         <div class="content">
             <div class="title m-b-md">
                 Jay's Pizza
@@ -24,7 +34,7 @@
             <div class="links">
                 <a href="{{ route('menu') }}">Check out our Menu</a>
                 |
-                <a href="#">Place your Order</a>
+                <a href="{{ route('orders.create') }}">Place your Order</a>
             </div>
         </div>
     </div>

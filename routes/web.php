@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MenuController;
+use App\Http\Controllers\OrderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,9 +18,15 @@ use App\Http\Controllers\MenuController;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('home');
 
 Auth::routes();
 
-Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::get('/home', [HomeController::class, 'index'])->name('access');
 Route::get('/menu', [MenuController::class, 'index'])->name('menu');
+
+Route::get('/orders', [OrderController::class, 'index'])->name('orders');
+Route::get('/orders/create', [OrderController::class, 'create'])->name('orders.create');
+Route::post('/orders', [OrderController::class, 'store']);
+Route::get('/orders/{id}', [OrderController::class, 'show'])->name('orders.show');
+Route::delete('/orders/{id}', [OrderController::class, 'destroy'])->name('orders.show');
