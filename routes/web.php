@@ -22,7 +22,8 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [HomeController::class, 'index'])->name('access');
+Route::get('/home', [HomeController::class, 'index']);
+
 Route::get('/menu', [MenuController::class, 'index'])->name('menu');
 
 Route::get('/orders', [OrderController::class, 'index'])->name('orders');

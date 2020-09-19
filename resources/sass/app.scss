@@ -9,6 +9,23 @@
 
 html, body {
     font-family: 'Nunito', sans-serif;
+    background: ghostwhite;
+}
+
+.table {
+    tbody {
+        tr {
+            td {
+                border-bottom:1px solid #3b3636;
+            }
+        }
+    }
+    thead {
+            th {
+                border-top: 2px solid #3b3636;
+                border-bottom:3px solid #3b3636;
+            }
+    }
 }
 
 .home-body {
@@ -36,17 +53,19 @@ html, body {
 .menu-body {
     background-image: url("/img/menu.jpg");
     background-size: cover;
-    height: 100vh;
+    background-position: bottom;
     margin: 0;
 }
 
 .menu-h1 {
     color: #323638;
-    font-size: 3.4rem;
+    font-size: 3rem;
 }
 
 .menu-items {
-    background: #f6f6f6dc;
+    background: #faf4f0d5;
+    margin-top: 5rem;
+    border-radius: 5%;
 }
 
 .menu-wrapper {
