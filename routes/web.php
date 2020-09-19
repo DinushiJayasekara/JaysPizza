@@ -26,8 +26,8 @@ Route::get('/home', [HomeController::class, 'index']);
 
 Route::get('/menu', [MenuController::class, 'index'])->name('menu');
 
-Route::get('/orders', [OrderController::class, 'index'])->name('orders');
+Route::get('/orders', [OrderController::class, 'index'])->name('orders')->middleware('auth');
 Route::get('/orders/create', [OrderController::class, 'create'])->name('orders.create');
 Route::post('/orders', [OrderController::class, 'store']);
-Route::get('/orders/{id}', [OrderController::class, 'show'])->name('orders.show');
+Route::get('/orders/{id}', [OrderController::class, 'show'])->name('orders.show')->middleware('auth');
 Route::delete('/orders/{id}', [OrderController::class, 'destroy'])->name('orders.show');

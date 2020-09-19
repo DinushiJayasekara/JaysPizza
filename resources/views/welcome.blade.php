@@ -5,9 +5,13 @@
         @if (Route::has('login'))
             <div class="top-left links ml-5">
                 @auth
-                    <a href="{{ url('/home') }}">Home</a>
+                    <a href="{{ url('/home') }}">View All Orders</a>
                 @else
-                    <a href="{{ route('login') }}">Login</a>
+                    <a href="{{ route('login') }}">
+                        Login 
+                        <br>
+                        <small class="ml-4">[Only For Employees]</small>
+                    </a>
 
                     {{-- @if (Route::has('register'))
                         <a href="{{ route('register') }}">Register</a>
