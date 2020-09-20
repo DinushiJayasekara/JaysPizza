@@ -9,7 +9,7 @@
 
         <div class="row justify-content-center">
             <div class="col-md-8">
-                <div class="card bg-dark text-white">
+                <div class="card text-dark" style="background-color: #f6e1a0 !important;">
                     <div class="card-body">
                         <form class="mx-5" method="POST" action="{{ route('orders') }}">
                             @csrf
@@ -49,7 +49,7 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <button type="submit" class="btn btn-light mt-3">Order Now!</button>
+                                <button type="submit" class="btn btn-danger mt-3">Order Now!</button>
                             </div>
                         </form>
                     </div>
